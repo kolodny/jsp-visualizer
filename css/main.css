@@ -1,0 +1,291 @@
+
+.CodeMirror {
+    font-size: 14px;
+    height: auto;
+    border-radius: 3px;
+}
+
+.CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.csp-editor .toolbar {
+    margin: 1em 0;
+}
+
+.csp-editor .toolbar button {
+    border: 0;
+    background-color: #5CB85C;
+    border-radius: 3px;
+    color: white;
+    padding: .3em .75em;
+}
+
+.csp-editor .toolbar .status {
+    display: inline-block;
+    margin: .3em 1em;
+    color: #5CB85C;
+}
+
+.csp-editor .toolbar .terminated {
+    color: red;
+}
+
+.html-output {
+    width: 100%;
+    height: 3em;
+    line-height: 1em;
+    background-color: #f0f0f5;
+    box-shadow: inset 0 0 5px #dfdff0;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+.timeline {
+    font-size: 16px;
+    width: 900px;
+    margin-left: -100px;
+    position: relative;
+}
+
+.timeline .key {
+    overflow: hidden;
+    text-align: right;
+    padding: 1em 2em;
+}
+
+.timeline .key div {
+    display: inline-block;
+}
+
+.timeline .key div:before {
+    content: ' ';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 1em;
+    margin-right: .25em;
+}    
+
+
+.timeline pre {
+    margin: 0;
+}
+
+div.CodeMirror {
+    padding: 1em;
+}
+
+.timeline ul {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 1em;
+    margin-left: 2em;
+}
+
+.timeline ul li {
+    height: 30px;
+}
+
+.timeline .process-name {
+    position: relative;
+}
+
+.timeline .process-name.selected {
+    background-color: pink;
+}
+
+.timeline svg rect {
+    shape-rendering: crispEdges;
+}
+
+.axis path {
+    display: none;
+}
+
+pre.highlight {
+    background-color: pink;
+}
+
+.tip-up.op-tip {
+    color: black;
+    padding: .5em 1em;
+    background-color: #202020;
+    color: #dfdfdf;
+}
+
+.tip-up.op-tip h4 {
+    font-weight: normal;
+}
+
+.tip-up.op-tip .value {
+    color: #F6B953;
+}
+
+/* colors */
+
+.timeline .key .alt-block:before {
+    background-color: #9061C2;
+}
+
+.timeline .key .block:before {
+    background-color: #91B092;
+}
+
+.timeline .key .sleep:before {
+    background-color: #444444;
+}
+
+.timeline .key .execute:before {
+    background-color: #FF8080;
+}
+
+
+.timeline { 
+    background-color: #202020;
+    border-radius: 3px;
+    color: #dfdfdf;
+    box-shadow: inset 0 0 10px black;
+}
+
+.bar.block, .bar.alt-block {
+    fill: #789578;
+}
+
+.bar.alt-block {
+   fill: #9061C2;
+}
+
+.bar.sleep {
+    fill: #444444;
+}
+
+.bar.execute {
+    fill: #FF8080;
+}
+
+.axis text {
+    fill: #dadada;
+}
+
+.axis line {
+    fill: none;
+    stroke: #333333;
+    shape-rendering: crispEdges;
+    stroke-dasharray: 1 2;
+}
+
+.take {
+    stroke: #F6B953;
+}
+.take.highlight {
+    stroke: #F58321;
+}
+
+/* examples */
+
+#ui3 span {
+    display: inline-block;
+    margin: 0 .25em;
+    text-decoration: underline;
+}
+
+#ui3 .tip-up {
+    border: 2px solid #5CB85C;
+    width: 300px;
+    left: -150px;
+    font-size: .7em;
+    padding: .5em 0;
+}
+
+#ui3 .tip-up:after,
+#ui3 .tip-up:before {
+    left: 50%;
+}
+
+#ui3 .tip-up:after {
+    border-bottom-color: white;
+}
+
+#ui3 .tip-up:before {
+    border-bottom-color: #5CB85C;
+}
+
+/* tooltip */
+
+.tip {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background: white;
+    border: 4px solid #38554a;
+    width: 400px;
+    padding: 1em;
+}
+
+.tip:after,
+.tip:before {
+    right: 100%;
+    top: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.tip:after {
+    border-color: rgba(213, 0, 0, 0);
+    border-right-color: white;
+    border-width: 10px;
+    margin-top: -10px;
+}
+
+.tip:before {
+    border-color: rgba(0, 255, 0, 0);
+    border-right-color: #38554a;
+    border-width: 16px;
+    margin-top: -16px;
+}
+
+.tip-up {
+    position: absolute;
+    background: #ffffff;
+    border: 2px solid #dfdfdf;
+    width: 450px;
+    padding: 1em;
+    border-radius: 3px;
+}
+.tip-up:after,
+.tip-up:before {
+    bottom: 100%;
+    left: 60px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.tip-up.left:after,
+.tip-up.left:before {
+    left: 350px;
+}
+.tip-up:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #202020;
+    border-width: 15px; margin-left: -15px;
+}
+.tip-up:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: #dfdfdf;
+    border-width: 18px;
+    margin-left: -18px;
+}
+
